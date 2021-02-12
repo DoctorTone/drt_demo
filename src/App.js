@@ -5,7 +5,7 @@ import Plane from "./components/Plane";
 
 function App() {
   return (
-    <Canvas camera={{ position: [0, 150, 150] }}>
+    <Canvas camera={{ position: [0, 50, 150] }}>
       <ambientLight intensity={2} />
       <pointLight position={[50, 50, 50]} />
       <Plane position={[0, -3, 0]} />
