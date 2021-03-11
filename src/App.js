@@ -10,13 +10,10 @@ function App() {
   const SCALE = 1;
 
   return (
-    <Canvas camera={{ position: [0, 50, 150] }}>
+    <Canvas camera={{ position: [0, 30, 45] }}>
       <ambientLight intensity={1} />
       <pointLight position={[50, 50, 50]} />
       <Cubes />
-      <Suspense fallback={null}>
-        <Logo scale={[SCALE, SCALE, SCALE]} />
-      </Suspense>
     </Canvas>
   );
 }
