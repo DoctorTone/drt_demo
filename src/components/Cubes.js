@@ -4,7 +4,7 @@ import * as THREE from "three";
 import { BoxBufferGeometry } from "three";
 import { SCENE } from "../config/sceneAttributes";
 
-const Cubes = (props) => {
+const Cubes = ({ color }) => {
   const boxGeometries = [];
   const boxPositions = [];
   const count = SCENE.NUM_ROWS_Z * SCENE.NUM_ROWS_Z;
@@ -51,10 +51,10 @@ const Cubes = (props) => {
   });
 
   return (
-    <group ref={group} rotation={[0, Math.PI / 2, 0]} {...props}>
+    <group ref={group} rotation={[0, Math.PI / 2, 0]}>
       <instancedMesh ref={mesh} args={[null, null, count]}>
         <cylinderBufferGeometry args={[1, 1, 1, 6]} />
-        <meshLambertMaterial color={SCENE.CUBE_COLOUR} />
+        <meshLambertMaterial color={color} />
       </instancedMesh>
     </group>
   );
