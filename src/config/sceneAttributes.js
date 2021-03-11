@@ -8,6 +8,7 @@ const SCENE = {
   BOX_SIZE: 2,
   X_START: -32.5,
   Z_START: -50,
+  WAVE_AMP: 5,
 };
 
 export { SCENE };
