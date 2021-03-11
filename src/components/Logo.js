@@ -7,7 +7,7 @@ const Logo = () => {
   return (
     <group>
       <Text
-        position={[0, 5, 10]}
+        position={[0, -10, 10]}
         scale={[0.1, 0.1, 0.1]}
         color="purple"
         children="DRT"

@@ -13,7 +13,7 @@ function App() {
     <Canvas camera={{ position: [0, 15, 45] }}>
       <ambientLight intensity={1} />
       <pointLight position={[50, 50, 50]} />
-      <Plane position={[0, -20, 0]} />
+      <Plane position={[0, -10, 0]} />
       <Cubes />
       <Suspense fallback={null}>
         <Logo />

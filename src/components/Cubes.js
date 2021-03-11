@@ -51,11 +51,9 @@ const Cubes = (props) => {
   });
 
   return (
-    <group ref={group} {...props}>
+    <group ref={group} rotation={[0, Math.PI / 2, 0]} {...props}>
       <instancedMesh ref={mesh} args={[null, null, count]}>
-        <boxBufferGeometry
-          args={[SCENE.BOX_SIZE, SCENE.BOX_SIZE, SCENE.BOX_SIZE]}
-        />
+        <cylinderBufferGeometry args={[1, 1, 1, 6]} />
         <meshLambertMaterial color={SCENE.CUBE_COLOUR} />
       </instancedMesh>
     </group>
