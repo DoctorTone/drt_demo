@@ -1,7 +1,8 @@
 import ReactDOM from "react-dom";
 import React from "react-dom";
 import { Canvas } from "react-three-fiber";
-import Plane from "./components/Plane";
+//import Plane from "./components/Plane";
+import Cubes from "./components/Cubes";
 import Logo from "./components/Logo";
 import { Suspense } from "react";
 
@@ -12,7 +13,7 @@ function App() {
     <Canvas camera={{ position: [0, 50, 150] }}>
       <ambientLight intensity={1} />
       <pointLight position={[50, 50, 50]} />
-      <Plane position={[0, -3, 0]} />
+      <Cubes />
       <Suspense fallback={null}>
         <Logo scale={[SCALE, SCALE, SCALE]} />
       </Suspense>

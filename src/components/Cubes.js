@@ -14,7 +14,15 @@ const Cubes = () => {
     boxGeometries.push(new THREE.BoxBufferGeometry(10, 10, 10));
   }
 
-  return <div></div>;
+  return (
+    <group>
+      {boxGeometries.map((geom) => {
+        <mesh key={geom.uuid} position={[10, 1, 0]}>
+          <meshStandardMaterial color={"yellow"} />
+        </mesh>;
+      })}
+    </group>
+  );
 };
 
 export default Cubes;
