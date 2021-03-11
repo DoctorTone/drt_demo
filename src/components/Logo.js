@@ -6,7 +6,12 @@ import Text from "./Text";
 const Logo = () => {
   return (
     <group>
-      <Text position={[0, 5, 0]} scale={[0.1, 0.1, 0.1]} children="DRT" />
+      <Text
+        position={[0, 5, 10]}
+        scale={[0.1, 0.1, 0.1]}
+        color="#ff0000"
+        children="DRT"
+      />
     </group>
   );
 };
