@@ -43,7 +43,7 @@ const Text = ({
     <group {...props}>
       <mesh ref={mesh}>
         <textBufferGeometry args={[children, config]} />
-        <meshStandardMaterial color={"purple"} />
+        <meshStandardMaterial color={color} />
       </mesh>
     </group>
   );

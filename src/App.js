@@ -10,7 +10,7 @@ function App() {
   const SCALE = 1;
 
   return (
-    <Canvas camera={{ position: [0, 30, 45] }}>
+    <Canvas camera={{ position: [0, 15, 45] }}>
       <ambientLight intensity={1} />
       <pointLight position={[50, 50, 50]} />
       <Plane position={[0, -20, 0]} />
