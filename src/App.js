@@ -15,6 +15,9 @@ function App() {
       <pointLight position={[50, 50, 50]} />
       <Plane position={[0, -20, 0]} />
       <Cubes />
+      <Suspense fallback={null}>
+        <Logo />
+      </Suspense>
     </Canvas>
   );
 }
