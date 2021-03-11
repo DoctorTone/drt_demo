@@ -56,7 +56,7 @@ const Cubes = (props) => {
         <boxBufferGeometry
           args={[SCENE.BOX_SIZE, SCENE.BOX_SIZE, SCENE.BOX_SIZE]}
         />
-        <meshLambertMaterial color={"yellow"} />
+        <meshLambertMaterial color={SCENE.CUBE_COLOUR} />
       </instancedMesh>
     </group>
   );

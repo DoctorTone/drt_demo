@@ -9,6 +9,7 @@ const SCENE = {
   X_START: -70,
   Z_START: -20,
   WAVE_AMP: 2.5,
+  CUBE_COLOUR: "hotpink",
 };
 
 export { SCENE };
