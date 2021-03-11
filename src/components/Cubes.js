@@ -1,16 +1,24 @@
 import React from "react";
 import * as THREE from "three";
 
-const NUM_CUBES_X = 2;
-const NUM_CUBES_Z = 2;
-const ROW_INC = 15;
+const NUM_ROWS_X = 5;
+const NUM_ROWS_Z = 5;
+const ROW_INC_X = 15;
+const ROW_INC_Z = 15;
+const X_START = -30;
+const Z_START = -30;
 
 const Cubes = (props) => {
   const boxGeometries = [];
   const boxPositions = [];
-  for (let i = 0, numRows = NUM_CUBES_X; i < numRows; ++i) {
-    boxGeometries.push(new THREE.BoxBufferGeometry(10, 10, 10));
-    boxPositions.push(new THREE.Vector3(i * ROW_INC, 0, 0));
+
+  for (let j = 0; j < NUM_ROWS_Z; ++j) {
+    for (let i = 0; i < NUM_ROWS_X; ++i) {
+      boxGeometries.push(new THREE.BoxBufferGeometry(10, 10, 10));
+      boxPositions.push(
+        new THREE.Vector3(X_START + i * ROW_INC_X, 0, Z_START + j * ROW_INC_Z)
+      );
+    }
   }
 
   return (
