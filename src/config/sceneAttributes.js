@@ -7,7 +7,7 @@ const SCENE = {
   ROW_INC_Z: 5,
   BOX_SIZE: 2,
   X_START: -32.5,
-  Z_START: -30,
+  Z_START: -50,
 };
 
 export { SCENE };

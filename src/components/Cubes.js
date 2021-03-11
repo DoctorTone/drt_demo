@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import { useFrame } from "react-three-fiber";
 import * as THREE from "three";
+import { BoxBufferGeometry } from "three";
 import { SCENE } from "../config/sceneAttributes";
 
 const Cubes = (props) => {
   const boxGeometries = [];
   const boxPositions = [];
+  const count = SCENE.NUM_ROWS_Z * SCENE.NUM_ROWS_Z;
+
+  const [dummy] = useState(() => new THREE.Object3D());
+
+  const group = useRef();
+  const mesh = useRef();
 
   for (let j = 0; j < SCENE.NUM_ROWS_Z; ++j) {
     for (let i = 0; i < SCENE.NUM_ROWS_X; ++i) {
@@ -25,13 +33,30 @@ const Cubes = (props) => {
     }
   }
 
+  useFrame((state) => {
+    const time = state.clock.getElapsedTime();
+
+    // Set positions of instanced meshes
+    let index;
+    for (let i = 0; i < SCENE.NUM_ROWS_Z; ++i) {
+      for (let j = 0; j < SCENE.NUM_ROWS_X; ++j) {
+        index = j + i * SCENE.NUM_ROWS_X;
+        dummy.position.copy(boxPositions[index]);
+        dummy.updateMatrix();
+        mesh.current.setMatrixAt(index, dummy.matrix);
+      }
+    }
+    mesh.current.instanceMatrix.needsUpdate = true;
+  });
+
   return (
-    <group {...props}>
-      {boxGeometries.map((geom, index) => (
-        <mesh key={geom.uuid} geometry={geom} position={boxPositions[index]}>
-          <meshLambertMaterial color={"yellow"} />
-        </mesh>
-      ))}
+    <group ref={group} {...props}>
+      <instancedMesh ref={mesh} args={[null, null, count]}>
+        <boxBufferGeometry
+          args={[SCENE.BOX_SIZE, SCENE.BOX_SIZE, SCENE.BOX_SIZE]}
+        />
+        <meshLambertMaterial color={"yellow"} />
+      </instancedMesh>
     </group>
   );
 };
