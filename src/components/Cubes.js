@@ -41,7 +41,7 @@ const Cubes = (props) => {
     for (let i = 0; i < SCENE.NUM_ROWS_Z; ++i) {
       for (let j = 0; j < SCENE.NUM_ROWS_X; ++j) {
         index = j + i * SCENE.NUM_ROWS_X;
-        boxPositions[index].y = SCENE.WAVE_AMP * Math.sin(time);
+        boxPositions[index].y = SCENE.WAVE_AMP * Math.sin(2 * time + i / 3);
         dummy.position.copy(boxPositions[index]);
         dummy.updateMatrix();
         mesh.current.setMatrixAt(index, dummy.matrix);
