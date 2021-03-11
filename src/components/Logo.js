@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import { useFrame } from "react-three-fiber";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import Text from "./Text";
 
 const Logo = (props) => {
@@ -10,6 +9,7 @@ const Logo = (props) => {
   useFrame((state) => {
     if (animating) {
       group.current.position.y += 0.1;
+      group.current.rotation.y += 0.1;
       setAnimating(group.current.position.y < 20);
     }
   });
@@ -17,7 +17,7 @@ const Logo = (props) => {
   return (
     <group ref={group}>
       <Text
-        position={[0, -10, 10]}
+        position={[0, 0, 0]}
         scale={[0.1, 0.1, 0.1]}
         color="purple"
         children="DRT"
