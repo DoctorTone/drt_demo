@@ -1,8 +1,10 @@
 import React, { useRef, useState } from "react";
 import { useFrame } from "react-three-fiber";
-import Text from "./Text";
+import { useLoader } from "react-three-fiber";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 const Logo = (props) => {
+  const logo = useLoader(GLTFLoader, "DRT-Text.glb");
   const group = useRef();
   const [animating, setAnimating] = useState(true);
 
@@ -15,13 +17,8 @@ const Logo = (props) => {
   });
 
   return (
-    <group ref={group}>
-      <Text
-        position={[0, 0, 0]}
-        scale={[0.1, 0.1, 0.1]}
-        color="purple"
-        children="DRT"
-      />
+    <group ref={group} position={[0, 0, 30]}>
+      <primitive object={logo.scene} />
     </group>
   );
 };
