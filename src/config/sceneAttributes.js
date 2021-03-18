@@ -10,6 +10,8 @@ const SCENE = {
   Z_START: -45,
   WAVE_AMP: 2.5,
   CUBE_COLOUR: "hotpink",
+  PLANE_SIZE_X: 100,
+  PLANE_SIZE_Y: 100,
 };
 
 export { SCENE };
