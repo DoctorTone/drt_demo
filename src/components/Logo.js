@@ -40,7 +40,7 @@ const Logo = (props) => {
     <group ref={group} position={[0, 0, 0]}>
       <primitive
         object={logo.scene}
-        position={[0, -10, 0]}
+        position={[0, -15, 0]}
         scale={[10, 10, 10]}
       />
     </group>
