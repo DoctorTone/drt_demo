@@ -6,6 +6,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 let delta;
 let elapsed;
 let lastElapsed = 0;
+const revSpeed = (2 * Math.PI) / 3;
 
 const Logo = (props) => {
   const logo = useLoader(GLTFLoader, "DRT-Text.glb");
@@ -30,7 +31,7 @@ const Logo = (props) => {
       setAnimationTime(animationTime + delta);
       // DEBUG
       console.log(`animation time = ${animationTime}`);
-      //group.current.rotation.y += 0.05;
+      group.current.rotation.y += revSpeed * delta;
       setAnimating(animationTime < 3);
     }
   });
