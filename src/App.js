@@ -4,6 +4,7 @@ import { Canvas } from "react-three-fiber";
 import Plane from "./components/Plane";
 import Cubes from "./components/Cubes";
 import Logo from "./components/Logo";
+import Sky from "./components/Sky";
 import { Suspense } from "react";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Cubes color={"orange"} />
       <Suspense fallback={null}>
         <Logo />
+        <Sky />
       </Suspense>
     </Canvas>
   );
