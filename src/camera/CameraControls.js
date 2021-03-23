@@ -12,7 +12,7 @@ const CameraControls = () => {
   const controls = useRef();
   useFrame(() => {
     // DEBUG
-    console.log("Cam = ", camera.position);
+    //console.log("Cam = ", camera.position);
     return controls.current.update();
   });
 

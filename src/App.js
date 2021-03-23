@@ -17,7 +17,7 @@ function App() {
       <ambientLight intensity={1} />
       <pointLight position={[50, 50, 50]} />
       <Plane position={[0, -10, 0]} />
-      <Cubes color={"darkgrey"} />
+      <Cubes color={"purple"} />
       <Suspense fallback={null}>
         <Logo />
         <Sky />

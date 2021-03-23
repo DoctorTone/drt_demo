@@ -9,7 +9,7 @@ let lastElapsed = 0;
 const revSpeed = (2 * Math.PI) / 3;
 
 const Logo = (props) => {
-  const logo = useLoader(GLTFLoader, "DRT-Text.glb");
+  const logo = useLoader(GLTFLoader, "DRT-Text.gltf");
   const group = useRef();
   const [animating, setAnimating] = useState(true);
   const [animationTime, setAnimationTime] = useState(0);
