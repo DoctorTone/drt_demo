@@ -3,8 +3,8 @@ import { useLoader, useThree } from "react-three-fiber";
 import { CubeTextureLoader } from "three";
 
 const Sky = () => {
-  const path = "textures/pisa/";
-  const format = ".png";
+  const path = "textures/skybox/";
+  const format = ".jpg";
 
   const { scene } = useThree();
 
