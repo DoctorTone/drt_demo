@@ -30,7 +30,7 @@ const Logo = (props) => {
       //console.log(`delta = ${delta}`);
       setAnimationTime(animationTime + delta);
       // DEBUG
-      console.log(`animation time = ${animationTime}`);
+      //console.log(`animation time = ${animationTime}`);
       group.current.rotation.y += revSpeed * delta;
       setAnimating(animationTime < 3);
     }
