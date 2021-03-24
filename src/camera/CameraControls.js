@@ -12,7 +12,7 @@ const CameraControls = () => {
   const controls = useRef();
   useFrame(() => {
     // DEBUG
-    //console.log("Cam = ", camera.position);
+    console.log("Cam = ", controls.current.target);
     return controls.current.update();
   });
 
@@ -21,6 +21,7 @@ const CameraControls = () => {
       ref={controls}
       args={[camera, domElement]}
       enableZoom={true}
+      target={[-45, 5, -5]}
     />
   );
 };

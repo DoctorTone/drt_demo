@@ -12,7 +12,7 @@ function App() {
   const SCALE = 1;
 
   return (
-    <Canvas camera={{ position: [-20, 25, 35] }}>
+    <Canvas camera={{ position: [11, 32, 35] }}>
       <CameraControls />
       <ambientLight intensity={1} />
       <pointLight position={[50, 50, 50]} />
