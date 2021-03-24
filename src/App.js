@@ -16,11 +16,9 @@ function App() {
       <CameraControls />
       <ambientLight intensity={1} />
       <pointLight position={[50, 50, 50]} />
-      <Plane position={[0, -10, 0]} />
-      <Cubes color={"purple"} />
+      <Cubes color={"goldenrod"} />
       <Suspense fallback={null}>
         <Logo />
-        <Sky />
       </Suspense>
     </Canvas>
   );
