@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="w-100 h-100">
-      <Panel displayText="Welcome to DRT Software" x={5} y={25} />
+      <Panel displayText="Welcome to DRT Software." x={5} y={25} />
       <Canvas camera={{ position: [11, 32, 35] }}>
         <CameraControls />
         <ambientLight intensity={1} />
