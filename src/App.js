@@ -7,6 +7,7 @@ import Cubes from "./components/Cubes";
 import Logo from "./components/Logo";
 import Sky from "./components/Sky";
 import Panel from "./components/Panel";
+import Navbar from "./components/Navbar";
 import { Suspense } from "react";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <div className="w-100 h-100">
+      <Navbar />
       <Panel displayText="Welcome to DRT Software." x={5} y={25} />
       <Canvas camera={{ position: [11, 32, 35] }}>
         <CameraControls />
