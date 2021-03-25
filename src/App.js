@@ -6,21 +6,25 @@ import Plane from "./components/Plane";
 import Cubes from "./components/Cubes";
 import Logo from "./components/Logo";
 import Sky from "./components/Sky";
+import Panel from "./components/Panel";
 import { Suspense } from "react";
 
 function App() {
   const SCALE = 1;
 
   return (
-    <Canvas camera={{ position: [11, 32, 35] }}>
-      <CameraControls />
-      <ambientLight intensity={1} />
-      <pointLight position={[50, 50, 50]} />
-      <Cubes color={"goldenrod"} />
-      <Suspense fallback={null}>
-        <Logo />
-      </Suspense>
-    </Canvas>
+    <div className="w-100 h-100">
+      <Panel displayText="Welcome to DRT Software" />
+      <Canvas camera={{ position: [11, 32, 35] }}>
+        <CameraControls />
+        <ambientLight intensity={1} />
+        <pointLight position={[50, 50, 50]} />
+        <Cubes color={"goldenrod"} />
+        <Suspense fallback={null}>
+          <Logo />
+        </Suspense>
+      </Canvas>
+    </div>
   );
 }
 
