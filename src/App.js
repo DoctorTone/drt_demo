@@ -1,32 +1,17 @@
 import ReactDOM from "react-dom";
 import React from "react-dom";
-import { Canvas } from "react-three-fiber";
-import CameraControls from "./camera/CameraControls";
-import Plane from "./components/Plane";
-import Cubes from "./components/Cubes";
-import Logo from "./components/Logo";
-import Sky from "./components/Sky";
-import Panel from "./components/Panel";
-import Navbar from "./components/Navbar";
-import { Suspense } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
 
 function App() {
-  const SCALE = 1;
-
   return (
-    <div className="w-100 h-100">
-      <Navbar />
-      <Panel displayText="Welcome to DRT Software." x={5} y={25} />
-      <Canvas camera={{ position: [11, 32, 35] }}>
-        <CameraControls />
-        <ambientLight intensity={1} />
-        <pointLight position={[50, 50, 50]} />
-        <Cubes color={"goldenrod"} />
-        <Suspense fallback={null}>
-          <Logo />
-        </Suspense>
-      </Canvas>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/about" component={About} />
+      </Switch>
+    </Router>
   );
 }
 
