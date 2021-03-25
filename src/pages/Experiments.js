@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 const Experiments = () => {
   return (
     <div>
-      <Navbar />
+      <Navbar activeLink="Experiments" />
       <p>Experiments</p>
     </div>
   );

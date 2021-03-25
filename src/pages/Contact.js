@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 const Contact = () => {
   return (
     <div>
-      <Navbar />
+      <Navbar activeLink="Contact" />
       <p>Please contact us</p>
     </div>
   );

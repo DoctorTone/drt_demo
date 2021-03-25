@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 const Portfolio = () => {
   return (
     <div>
-      <Navbar />
+      <Navbar activeLink="Portfolio" />
       <p>Portfolio</p>
     </div>
   );

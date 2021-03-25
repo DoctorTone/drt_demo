@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 const About = () => {
   return (
     <div>
-      <Navbar />
+      <Navbar activeLink="About" />
       <p>All about DRT</p>
     </div>
   );
