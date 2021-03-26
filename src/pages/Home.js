@@ -16,7 +16,7 @@ const Home = () => {
         <CameraControls />
         <ambientLight intensity={1} />
         <pointLight position={[50, 50, 50]} />
-        <Cubes color={"goldenrod"} />
+        <Cubes color={"grey"} />
         <Suspense fallback={null}>
           <Logo />
         </Suspense>
