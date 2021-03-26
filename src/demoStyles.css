@@ -15,3 +15,13 @@ body {
 .front {
   z-index: 1000;
 }
+
+.h-line {
+  color: white;
+  background-color: grey;
+  width: 80%;
+}
+
+.indent {
+  margin-left: 10%;
+}

@@ -5,7 +5,9 @@ const Portfolio = () => {
   return (
     <div>
       <Navbar activeLink="Portfolio" />
-      <p>Portfolio</p>
+      <hr className="mt-5 h-line" />
+      <h2 className="indent">Portfolio</h2>
+      <hr className="h-line" />
     </div>
   );
 };

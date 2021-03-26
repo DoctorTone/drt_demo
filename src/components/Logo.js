@@ -31,7 +31,7 @@ const Logo = (props) => {
         group.current.rotation.y = 0;
       }
       // DEBUG
-      console.log(`time = ${animationTime}`);
+      //console.log(`time = ${animationTime}`);
       setAnimationTime(animationTime + delta);
       if (animationTime < 0) {
         setAnimationTime(0);
