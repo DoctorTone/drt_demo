@@ -7,7 +7,7 @@ const Portfolio = () => {
       <Navbar activeLink="Portfolio" />
       <hr className="mt-5 h-line" />
       <h2 className="indent">Portfolio</h2>
-      <hr className="h-line" />
+      <hr className="h-line mb-5" />
       <div className="container">
         <div className="row">
           <div className="col-4">
