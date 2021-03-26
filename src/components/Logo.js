@@ -28,12 +28,15 @@ const Logo = (props) => {
       group.current.position.y += 10 * delta;
       if (group.current.position.y < 0) {
         group.current.position.y = 0;
+        group.current.rotation.y = 0;
       }
       // DEBUG
       console.log(`time = ${animationTime}`);
       setAnimationTime(animationTime + delta);
       if (animationTime < 0) {
         setAnimationTime(0);
+        group.current.position.y = 0;
+        group.current.rotation.y = 0;
       }
       // DEBUG
       //console.log(`animation time = ${animationTime}`);
