@@ -14,7 +14,7 @@ const Home = () => {
       <Panel displayText="Welcome to DRT Software." x={5} y={25} />
       <Canvas camera={{ position: [11, 32, 35] }}>
         <CameraControls />
-        <spotLight position={[0, 30, 0]} />
+        <spotLight position={[50, 50, 7]} />
         <Cubes color={"grey"} />
         <Suspense fallback={null}>
           <Logo />
