@@ -9,14 +9,21 @@ const Portfolio = () => {
     from: { scale: 0 },
   });
 
+  const background = {
+    background: "url(logo512.png) no-repeat center fixed",
+  };
+
   return (
-    <div>
+    <div style={background}>
       <Navbar activeLink="Portfolio" />
       <hr className="mt-5 h-line" />
       <h2 className="indent orangeText">Portfolio</h2>
       <hr className="h-line mb-5" />
       <div className="container">
-        <div className="row">
+        <p className="mb-5">
+          These are a collection of projects that I've worked on over the years.
+        </p>
+        <div className="row orangeText">
           <div className="col-4 img-overlay">
             <animated.img
               style={props}
