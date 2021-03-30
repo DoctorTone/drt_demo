@@ -14,7 +14,7 @@ const Home = () => {
       <FloatBar />
       <PanelH1 displayText="Welcome to DRT Software." x={5} y={20} />
       <Panel
-        displayText="I'm Tony Glover and I build applications."
+        displayText="I'm Tony Glover and I build web applications."
         x={5}
         y={35}
       />
