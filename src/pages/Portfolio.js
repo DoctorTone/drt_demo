@@ -10,7 +10,7 @@ const Portfolio = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 2000,
+      duration: 1000,
     });
   }, []);
 
@@ -21,13 +21,10 @@ const Portfolio = () => {
       <h2 className="indent orangeText">Portfolio</h2>
       <hr className="h-line mb-5" />
       <div className="container">
-        <p className="mb-5">
-          These are a collection of projects that I've worked on over the years.
-        </p>
         <div className="row orangeText">
           <div className="col-4 img-overlay">
             <img
-              data-aos="fade-in"
+              data-aos="fade-up"
               className="img-fluid rounded-lg"
               src="volumeRender.jpg"
               alt=""
