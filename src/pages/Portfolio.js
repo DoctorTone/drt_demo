@@ -9,10 +9,12 @@ const Portfolio = () => {
   };
 
   const changeOpacity = (e) => {
+    console.log(`Mouse in target = ${e.target}`);
     e.target.style.opacity = "0.3";
   };
 
   const resetOpacity = (e) => {
+    console.log(`Mouse out target=${e.target}`);
     e.target.style.opacity = "1.0";
   };
 
@@ -30,11 +32,7 @@ const Portfolio = () => {
       <hr className="h-line mb-5" />
       <div className="container">
         <div className="row orangeText mb-5">
-          <div
-            className="col-4 img-overlay"
-            onMouseEnter={changeOpacity}
-            onMouseLeave={resetOpacity}
-          >
+          <div className="col-4 img-overlay">
             <img
               data-aos="fade-up"
               className="img-fluid rounded-lg"
@@ -46,13 +44,23 @@ const Portfolio = () => {
             </div>
           </div>
           <div className="col-4 img-overlay">
-            <img className="img-fluid rounded-lg" src="FTSEViz.jpg" alt="" />
+            <img
+              data-aos="fade-up"
+              className="img-fluid rounded-lg"
+              src="FTSEViz.jpg"
+              alt=""
+            />
             <div className="img-text-overlay">
               <h4>3D Data Visualisation</h4>
             </div>
           </div>
           <div className="col-4 text-center img-overlay">
-            <img className="img-fluid rounded" src="NEON Logo.png" alt="" />
+            <img
+              data-aos="fade-up"
+              className="img-fluid rounded"
+              src="NEON Logo.png"
+              alt=""
+            />
             <div className="img-text-overlay">
               <h4>Medical Trials</h4>
             </div>
