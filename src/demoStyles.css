@@ -11,7 +11,9 @@ body,
 body {
   background: black;
 }
-
+.orangeText {
+  color: orange;
+}
 .front {
   z-index: 1000;
 }
