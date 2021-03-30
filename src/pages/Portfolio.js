@@ -8,6 +8,10 @@ const Portfolio = () => {
     background: "url(logo512.png) no-repeat center fixed",
   };
 
+  const imgStyle = {
+    border: "white solid 1px",
+  };
+
   const changeOpacity = (e) => {
     console.log(`Mouse in target = ${e.target}`);
     e.target.style.opacity = "0.3";
@@ -31,7 +35,7 @@ const Portfolio = () => {
       <h2 className="indent orangeText">Portfolio</h2>
       <hr className="h-line mb-5" />
       <div className="container">
-        <div className="row orangeText mb-5">
+        <div className="row orangeText text-center mb-5">
           <div className="col-6 img-overlay">
             <img
               data-aos="fade-up"
@@ -56,22 +60,11 @@ const Portfolio = () => {
           </div>
         </div>
 
-        <div className="row orangeText mb-5">
-          <div className="col-6 image-overlay">
-            <img
-              data-aos="fade-up"
-              className="img-fluid rounded"
-              src="NEON Logo.png"
-              alt=""
-            />
-            <div className="img-text-overlay">
-              <h4>Medical Trials</h4>
-            </div>
-          </div>
+        <div className="row orangeText text-center mb-5">
           <div className="col-6 img-overlay">
             <img
               data-aos="fade-up"
-              className="img-fluid rounded-lg"
+              className="img-fluid rounded"
               src="sleepData.jpg"
               alt=""
             />
@@ -79,9 +72,20 @@ const Portfolio = () => {
               <h4>Sleep Visualisation</h4>
             </div>
           </div>
+          <div className="col-6 img-overlay">
+            <img
+              data-aos="fade-up"
+              className="img-fluid rounded-lg"
+              src="NEON.jpg"
+              alt=""
+            />
+            <div className="img-text-overlay">
+              <h4>Clinical Trials</h4>
+            </div>
+          </div>
         </div>
 
-        <div className="row orangeText mb-5">
+        <div className="row orangeText text-center mb-5">
           <div className="col-6 img-overlay">
             <img
               data-aos="fade-up"
