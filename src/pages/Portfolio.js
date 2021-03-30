@@ -8,6 +8,14 @@ const Portfolio = () => {
     background: "url(logo512.png) no-repeat center fixed",
   };
 
+  const changeOpacity = (e) => {
+    e.target.style.opacity = "0.3";
+  };
+
+  const resetOpacity = (e) => {
+    e.target.style.opacity = "1.0";
+  };
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -21,8 +29,12 @@ const Portfolio = () => {
       <h2 className="indent orangeText">Portfolio</h2>
       <hr className="h-line mb-5" />
       <div className="container">
-        <div className="row orangeText">
-          <div className="col-4 img-overlay">
+        <div className="row orangeText mb-5">
+          <div
+            className="col-4 img-overlay"
+            onMouseEnter={changeOpacity}
+            onMouseLeave={resetOpacity}
+          >
             <img
               data-aos="fade-up"
               className="img-fluid rounded-lg"
@@ -43,6 +55,20 @@ const Portfolio = () => {
             <img className="img-fluid rounded" src="NEON Logo.png" alt="" />
             <div className="img-text-overlay">
               <h4>Medical Trials</h4>
+            </div>
+          </div>
+        </div>
+
+        <div className="row orangeText">
+          <div className="col-4 img-overlay">
+            <img
+              data-aos="fade-up"
+              className="img-fluid rounded-lg"
+              src="sleepData.jpg"
+              alt=""
+            />
+            <div className="img-text-overlay">
+              <h4>Sleep Visualisation</h4>
             </div>
           </div>
         </div>
