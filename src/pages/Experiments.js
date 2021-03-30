@@ -5,7 +5,9 @@ const Experiments = () => {
   return (
     <div>
       <Navbar activeLink="Experiments" />
-      <p>Experiments</p>
+      <hr className="mt-5 h-line" />
+      <h2 className="indent">Experiments</h2>
+      <hr className="h-line mb-5" />
     </div>
   );
 };
