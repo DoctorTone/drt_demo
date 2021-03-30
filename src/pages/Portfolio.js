@@ -39,8 +39,8 @@ const Portfolio = () => {
               <h4>3D Data Visualisation</h4>
             </div>
           </div>
-          <div className="col-4">
-            <img className="img-fluid rounded" src="pandemic.jpg" alt="" />
+          <div className="col-4 text-center">
+            <img className="img-fluid rounded" src="NEON Logo.png" alt="" />
           </div>
         </div>
       </div>
