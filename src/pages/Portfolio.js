@@ -110,6 +110,9 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
+
+      <hr className="mt-5 h-line" />
+      <p>Company info here</p>
     </div>
   );
 };
