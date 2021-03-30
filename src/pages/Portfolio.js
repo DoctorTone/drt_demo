@@ -1,10 +1,10 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import Bounce from "react-reveal/Bounce";
-import Flip from "react-reveal/Flip";
-import Zoom from "react-reveal/Zoom";
+import { useSpring, animated } from "react-spring";
 
 const Portfolio = () => {
+  const props = useSpring({ scale: 1, from: { scale: 0 } });
+
   return (
     <div>
       <Navbar activeLink="Portfolio" />
@@ -14,26 +14,24 @@ const Portfolio = () => {
       <div className="container">
         <div className="row">
           <div className="col-4 img-overlay">
-            <Zoom>
-              <img
-                className="img-fluid rounded-lg"
-                src="volumeRender.jpg"
-                alt=""
-              />
-            </Zoom>
+            <animated.img
+              style={props}
+              className="img-fluid rounded-lg"
+              src="volumeRender.jpg"
+              alt=""
+            />
             <div className="img-text-overlay">
               <h4>Medical Visualisation</h4>
             </div>
           </div>
-          <div className="col-4">
-            <Zoom>
-              <img className="img-fluid rounded" src="FTSEViz.jpg" alt="" />
-            </Zoom>
+          <div className="col-4 img-overlay">
+            <img className="img-fluid rounded-lg" src="FTSEViz.jpg" alt="" />
+            <div className="img-text-overlay">
+              <h4>3D Data Visualisation</h4>
+            </div>
           </div>
           <div className="col-4">
-            <Zoom>
-              <img className="img-fluid rounded" src="pandemic.jpg" alt="" />
-            </Zoom>
+            <img className="img-fluid rounded" src="pandemic.jpg" alt="" />
           </div>
         </div>
       </div>
