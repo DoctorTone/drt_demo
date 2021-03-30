@@ -14,9 +14,14 @@ const Home = () => {
       <FloatBar />
       <PanelH1 displayText="Welcome to DRT Software." x={5} y={20} />
       <Panel
-        displayText="I'm Tony Glover and I build web applications."
-        x={5}
+        displayText="Hi, I'm Tony Glover, a full-stack developer and founder of DRT."
+        x={7.5}
         y={35}
+      />
+      <Panel
+        displayText="I'd love to help you with your next project."
+        x={7.5}
+        y={40}
       />
       <Canvas camera={{ position: [11, 32, 35] }}>
         <CameraControls />

@@ -1,20 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
-import { useSpring, animated } from "react-spring";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Portfolio = () => {
-  const props = useSpring({
-    config: { duration: 750 },
-    scale: 1,
-    from: { scale: 0 },
-  });
-
   const background = {
     background: "url(logo512.png) no-repeat center fixed",
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
-    <div style={background}>
+    <div>
       <Navbar activeLink="Portfolio" />
       <hr className="mt-5 h-line" />
       <h2 className="indent orangeText">Portfolio</h2>
@@ -25,8 +26,8 @@ const Portfolio = () => {
         </p>
         <div className="row orangeText">
           <div className="col-4 img-overlay">
-            <animated.img
-              style={props}
+            <img
+              data-aos="fade-in"
               className="img-fluid rounded-lg"
               src="volumeRender.jpg"
               alt=""
@@ -36,23 +37,13 @@ const Portfolio = () => {
             </div>
           </div>
           <div className="col-4 img-overlay">
-            <animated.img
-              style={props}
-              className="img-fluid rounded-lg"
-              src="FTSEViz.jpg"
-              alt=""
-            />
+            <img className="img-fluid rounded-lg" src="FTSEViz.jpg" alt="" />
             <div className="img-text-overlay">
               <h4>3D Data Visualisation</h4>
             </div>
           </div>
           <div className="col-4">
-            <animated.img
-              style={props}
-              className="img-fluid rounded"
-              src="pandemic.jpg"
-              alt=""
-            />
+            <img className="img-fluid rounded" src="pandemic.jpg" alt="" />
           </div>
         </div>
       </div>
