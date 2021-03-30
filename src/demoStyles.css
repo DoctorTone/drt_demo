@@ -29,7 +29,7 @@ body {
 }
 
 .img-overlay:hover .img-text-overlay {
-  opacity: 0.75;
+  opacity: 1;
 }
 .img-text-overlay {
   border-radius: 10px;
