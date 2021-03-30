@@ -39,8 +39,11 @@ const Portfolio = () => {
               <h4>3D Data Visualisation</h4>
             </div>
           </div>
-          <div className="col-4 text-center">
+          <div className="col-4 text-center img-overlay">
             <img className="img-fluid rounded" src="NEON Logo.png" alt="" />
+            <div className="img-text-overlay">
+              <h4>Medical Trials</h4>
+            </div>
           </div>
         </div>
       </div>
