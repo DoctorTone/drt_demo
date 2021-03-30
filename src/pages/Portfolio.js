@@ -32,7 +32,7 @@ const Portfolio = () => {
       <hr className="h-line mb-5" />
       <div className="container">
         <div className="row orangeText mb-5">
-          <div className="col-4 img-overlay">
+          <div className="col-6 img-overlay">
             <img
               data-aos="fade-up"
               className="img-fluid rounded-lg"
@@ -43,7 +43,7 @@ const Portfolio = () => {
               <h4>Medical Visualisation</h4>
             </div>
           </div>
-          <div className="col-4 img-overlay">
+          <div className="col-6 img-overlay">
             <img
               data-aos="fade-up"
               className="img-fluid rounded-lg"
@@ -54,7 +54,10 @@ const Portfolio = () => {
               <h4>3D Data Visualisation</h4>
             </div>
           </div>
-          <div className="col-4 text-center img-overlay">
+        </div>
+
+        <div className="row orangeText mb-5">
+          <div className="col-6 image-overlay">
             <img
               data-aos="fade-up"
               className="img-fluid rounded"
@@ -65,10 +68,7 @@ const Portfolio = () => {
               <h4>Medical Trials</h4>
             </div>
           </div>
-        </div>
-
-        <div className="row orangeText">
-          <div className="col-4 img-overlay">
+          <div className="col-6 img-overlay">
             <img
               data-aos="fade-up"
               className="img-fluid rounded-lg"
@@ -77,6 +77,31 @@ const Portfolio = () => {
             />
             <div className="img-text-overlay">
               <h4>Sleep Visualisation</h4>
+            </div>
+          </div>
+        </div>
+
+        <div className="row orangeText mb-5">
+          <div className="col-6 img-overlay">
+            <img
+              data-aos="fade-up"
+              className="img-fluid rounded-lg"
+              src="dnaVisualisation.jpg"
+              alt=""
+            />
+            <div className="img-text-overlay">
+              <h4>Scientific Visualisation</h4>
+            </div>
+          </div>
+          <div className="col-6 img-overlay">
+            <img
+              data-aos="fade-up"
+              className="img-fluid rounded-lg"
+              src="fireSafety.jpg"
+              alt=""
+            />
+            <div className="img-text-overlay">
+              <h4>Safety Simulation</h4>
             </div>
           </div>
         </div>
