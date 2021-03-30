@@ -5,6 +5,7 @@ const Panel = ({ displayText, x, y }) => {
     left: `${x}%`,
     top: `${y}%`,
   };
+
   return (
     <p className="position-absolute" style={panelStyle}>
       {displayText}
