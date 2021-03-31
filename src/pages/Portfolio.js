@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -37,12 +38,15 @@ const Portfolio = () => {
       <div className="container">
         <div className="row orangeText text-center mb-5">
           <div className="col-6 img-overlay">
-            <img
-              data-aos="fade-up"
-              className="img-fluid rounded-lg"
-              src="volumeRender.jpg"
-              alt=""
-            />
+            <Link to="/portfolio/medical">
+              <img
+                data-aos="fade-up"
+                className="img-fluid rounded-lg"
+                src="volumeRender.jpg"
+                alt=""
+              />
+            </Link>
+
             <div className="img-text-overlay">
               <h4>Medical Visualisation</h4>
             </div>
