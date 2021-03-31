@@ -16,7 +16,7 @@ function App() {
         render={({ location }) => {
           return (
             <PageTransition
-              preset="moveToLeftFromRight"
+              preset="moveToBottomFromTop"
               transitionKey={location.pathname}
             >
               <Switch location={location}>
