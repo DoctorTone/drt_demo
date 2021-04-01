@@ -10,6 +10,14 @@ const Portfolio = () => {
     background: "url(logo512.png) no-repeat center fixed",
   };
 
+  const renderStyle = {
+    position: "absolute",
+    top: "0",
+    left: "0",
+    right: "0",
+    bottom: "0",
+  };
+
   const imgStyle = {
     border: "white solid 1px",
   };
@@ -31,7 +39,7 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <div>
+    <div style={renderStyle}>
       <Navbar activeLink="Portfolio" />
       <hr className="mt-5 h-line" />
       <h2 className="indent orangeText">Portfolio</h2>
