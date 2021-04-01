@@ -10,13 +10,14 @@ import AbsoluteWrapper from "../components/AbsoluteWrapper";
 import { Suspense } from "react";
 
 const Home = () => {
-  const canvasStyle = {
-    width: "1280px",
-    height: "1000px",
+  const renderStyle = {
+    position: "relative",
+    width: "100vw",
+    height: "100vh",
   };
 
   return (
-    <>
+    <div style={renderStyle}>
       <FloatBar />
       <PanelH1 displayText="Welcome to DRT Software." x={5} y={20} />
       <Panel
@@ -29,10 +30,7 @@ const Home = () => {
         x={7.5}
         y={40}
       />
-      <Canvas
-        className="absolute-position w-100 h-100"
-        camera={{ position: [11, 32, 35] }}
-      >
+      <Canvas className="w-100 h-100" camera={{ position: [11, 32, 35] }}>
         <CameraControls />
         <spotLight position={[50, 50, 7]} />
         <Cubes color={"grey"} />
@@ -40,7 +38,7 @@ const Home = () => {
           <Logo />
         </Suspense>
       </Canvas>
-    </>
+    </div>
   );
 };
 
