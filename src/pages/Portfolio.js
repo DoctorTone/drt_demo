@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
+import AbsoluteWrapper from "../components/AbsoluteWrapper";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -30,7 +31,7 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <div>
+    <AbsoluteWrapper>
       <Navbar activeLink="Portfolio" />
       <hr className="mt-5 h-line" />
       <h2 className="indent orangeText">Portfolio</h2>
@@ -117,7 +118,7 @@ const Portfolio = () => {
 
       <hr className="mt-5 h-line" />
       <p>Company info here</p>
-    </div>
+    </AbsoluteWrapper>
   );
 };
 

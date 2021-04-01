@@ -6,11 +6,17 @@ import Logo from "../components/Logo";
 import PanelH1 from "../components/PanelH1";
 import Panel from "../components/Panel";
 import FloatBar from "../components/Floatbar";
+import AbsoluteWrapper from "../components/AbsoluteWrapper";
 import { Suspense } from "react";
 
 const Home = () => {
+  const canvasStyle = {
+    width: "1280px",
+    height: "1000px",
+  };
+
   return (
-    <div className="w-100 h-100">
+    <>
       <FloatBar />
       <PanelH1 displayText="Welcome to DRT Software." x={5} y={20} />
       <Panel
@@ -23,7 +29,10 @@ const Home = () => {
         x={7.5}
         y={40}
       />
-      <Canvas camera={{ position: [11, 32, 35] }}>
+      <Canvas
+        className="absolute-position w-100 h-100"
+        camera={{ position: [11, 32, 35] }}
+      >
         <CameraControls />
         <spotLight position={[50, 50, 7]} />
         <Cubes color={"grey"} />
@@ -31,7 +40,7 @@ const Home = () => {
           <Logo />
         </Suspense>
       </Canvas>
-    </div>
+    </>
   );
 };
 
