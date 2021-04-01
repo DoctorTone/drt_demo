@@ -31,7 +31,7 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <AbsoluteWrapper>
+    <div>
       <Navbar activeLink="Portfolio" />
       <hr className="mt-5 h-line" />
       <h2 className="indent orangeText">Portfolio</h2>
@@ -118,7 +118,7 @@ const Portfolio = () => {
 
       <hr className="mt-5 h-line" />
       <p>Company info here</p>
-    </AbsoluteWrapper>
+    </div>
   );
 };
 

@@ -14,25 +14,23 @@ function App() {
   const { location } = useContext(__RouterContext);
 
   const transitions = useTransition(location, (location) => location.pathname, {
-    from: { opacity: 0, transform: "translate(100%, 0)" },
-    enter: { opacity: 1, transform: "translate(0, 0)" },
-    leave: { opacity: 0, transform: "translate(-50%, 0)" },
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
   });
 
   return (
     <>
-      {transitions.map(({ item, props, key }) => (
-        <animated.div key={key} style={props}>
-          <Switch location={item}>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/portfolio" component={Portfolio} />
-            <Route exact path="/portfolio/medical" component={MedicalViz} />
-            <Route exact path="/experiments" component={Experiments} />
-            <Route exact path="/contact" component={Contact} />
-            <Route exact path="/about" component={About} />
-          </Switch>
-        </animated.div>
-      ))}
+      <div>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/portfolio" component={Portfolio} />
+          <Route exact path="/portfolio/medical" component={MedicalViz} />
+          <Route exact path="/experiments" component={Experiments} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/about" component={About} />
+        </Switch>
+      </div>
     </>
   );
 }
