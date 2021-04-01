@@ -7,9 +7,6 @@ const Navbar = ({ activeLink }) => {
   let linkStateContact = "nav-link";
   let linkStateAbout = "nav-link";
 
-  // DEBUG
-  console.log("Created navbar");
-
   switch (activeLink) {
     case "Portfolio":
       linkStatePortfolio += " active";
