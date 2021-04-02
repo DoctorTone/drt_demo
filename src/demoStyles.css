@@ -53,7 +53,7 @@ body {
 .fade-appear-active,
 .fade-enter.fade-enter-active {
   opacity: 1;
-  transition: opacity 1000ms linear;
+  transition: opacity 1100ms linear;
 }
 
 .fade-exit {
@@ -62,7 +62,7 @@ body {
 
 .fade-exit.fade-exit-active {
   opacity: 0;
-  transition: opacity 1000ms linear;
+  transition: opacity 1100ms linear;
 }
 
 .swipeRight-enter {
