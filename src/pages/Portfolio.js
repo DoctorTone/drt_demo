@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import AbsoluteWrapper from "../components/AbsoluteWrapper";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Info from "../components/Info";
 
 const Portfolio = () => {
   const background = {
@@ -134,7 +135,7 @@ const Portfolio = () => {
       </div>
 
       <hr className="mt-5 h-line" />
-      <p>Company info here</p>
+      <Info />
     </div>
   );
 };
