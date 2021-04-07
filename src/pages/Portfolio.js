@@ -60,65 +60,75 @@ const Portfolio = () => {
             </Link>
           </div>
           <div className="col-6 img-overlay">
-            <img
-              data-aos="fade-up"
-              className="img-fluid rounded-lg"
-              src="FTSEViz.jpg"
-              alt=""
-            />
-            <div className="img-text-overlay">
-              <h4>3D Data Visualisation</h4>
-            </div>
+            <Link className="link-image" to="/portfolio/dataViz">
+              <img
+                data-aos="fade-up"
+                className="img-fluid rounded-lg"
+                src="FTSEViz.jpg"
+                alt=""
+              />
+              <div className="img-text-overlay">
+                <h4>3D Data Visualisation</h4>
+              </div>
+            </Link>
           </div>
         </div>
 
         <div className="row orangeText text-center mb-5">
-          <div className="col-6 img-overlay">
-            <img
-              data-aos="fade-up"
-              className="img-fluid rounded"
-              src="sleepData.jpg"
-              alt=""
-            />
-            <div className="img-text-overlay">
-              <h4>Sleep Visualisation</h4>
-            </div>
+          <div className="col-6">
+            <Link className="link-image" to="/portfolio/sleepData">
+              <img
+                data-aos="fade-up"
+                className="img-fluid rounded"
+                src="sleepData.jpg"
+                alt=""
+              />
+              <div className="img-text-overlay">
+                <h4>Sleep Visualisation</h4>
+              </div>
+            </Link>
           </div>
-          <div className="col-6 img-overlay">
-            <img
-              data-aos="fade-up"
-              className="img-fluid rounded-lg"
-              src="NEON.jpg"
-              alt=""
-            />
-            <div className="img-text-overlay">
-              <h4>Clinical Trials</h4>
-            </div>
+          <div className="col-6">
+            <Link className="link-image" to="/portfolio/neon">
+              <img
+                data-aos="fade-up"
+                className="img-fluid rounded-lg"
+                src="NEON.jpg"
+                alt=""
+              />
+              <div className="img-text-overlay">
+                <h4>Clinical Trials</h4>
+              </div>
+            </Link>
           </div>
         </div>
 
         <div className="row orangeText text-center mb-5">
-          <div className="col-6 img-overlay">
-            <img
-              data-aos="fade-up"
-              className="img-fluid rounded-lg"
-              src="dnaVisualisation.jpg"
-              alt=""
-            />
-            <div className="img-text-overlay">
-              <h4>Scientific Visualisation</h4>
-            </div>
+          <div className="col-6">
+            <Link className="link-image" to="/portfolio/neon">
+              <img
+                data-aos="fade-up"
+                className="img-fluid rounded-lg"
+                src="dnaVisualisation.jpg"
+                alt=""
+              />
+              <div className="img-text-overlay">
+                <h4>Scientific Visualisation</h4>
+              </div>
+            </Link>
           </div>
-          <div className="col-6 img-overlay">
-            <img
-              data-aos="fade-up"
-              className="img-fluid rounded-lg"
-              src="fireSafety.jpg"
-              alt=""
-            />
-            <div className="img-text-overlay">
-              <h4>Safety Simulation</h4>
-            </div>
+          <div className="col-6">
+            <Link className="link-image" to="/portfolio/safety">
+              <img
+                data-aos="fade-up"
+                className="img-fluid rounded-lg"
+                src="fireSafety.jpg"
+                alt=""
+              />
+              <div className="img-text-overlay">
+                <h4>Safety Simulation</h4>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
