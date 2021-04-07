@@ -31,7 +31,7 @@ a.link-image:hover {
 }
 
 .link-image:hover .img-fluid {
-  opacity: 0.5 !important;
+  opacity: 0.4 !important;
 }
 .link-image:hover .img-text-overlay {
   opacity: 1;
