@@ -46,19 +46,18 @@ const Portfolio = () => {
       <hr className="h-line mb-5" />
       <div className="container">
         <div className="row orangeText text-center mb-5">
-          <div className="col-6 img-overlay">
-            <Link to="/portfolio/medical">
+          <div className="col-6">
+            <Link className="link-image" to="/portfolio/medical">
               <img
                 data-aos="fade-up"
                 className="img-fluid rounded-lg"
                 src="volumeRender.jpg"
                 alt=""
               />
+              <div className="img-text-overlay">
+                <h4>Medical Visualisation</h4>
+              </div>
             </Link>
-
-            <div className="img-text-overlay">
-              <h4>Medical Visualisation</h4>
-            </div>
           </div>
           <div className="col-6 img-overlay">
             <img

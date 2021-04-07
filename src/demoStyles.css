@@ -23,12 +23,17 @@ body {
   background-color: grey;
   width: 80%;
 }
-
+a.link-image:hover {
+  color: orange;
+}
 .indent {
   margin-left: 10%;
 }
 
-.img-overlay:hover .img-text-overlay {
+.link-image:hover .img-fluid {
+  opacity: 0.5 !important;
+}
+.link-image:hover .img-text-overlay {
   opacity: 1;
 }
 .img-text-overlay {
