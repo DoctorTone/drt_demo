@@ -24,13 +24,11 @@ const Home = () => {
       <PanelH1 displayText="Welcome to DRT Software." x={5} y={20} />
       <Panel
         displayText="Hi, I'm Tony Glover, a full-stack software developer and founder of DRT."
-        x={7.5}
-        y={35}
+        position={[7.5, 35]}
       />
       <Panel
         displayText="I'd love to help you with your next project."
-        x={7.5}
-        y={41}
+        position={[7.5, 41]}
       />
       <Canvas className="w-100 h-100" camera={{ position: [11, 32, 35] }}>
         <CameraControls />

@@ -1,9 +1,9 @@
 import React from "react";
 
-const Panel = ({ displayText, x, y }) => {
+const Panel = ({ displayText, position }) => {
   const panelStyle = {
-    left: `${x}%`,
-    top: `${y}%`,
+    left: `${position[0]}%`,
+    top: `${position[1]}%`,
     background: "goldenrod",
     borderRadius: "7px",
   };
