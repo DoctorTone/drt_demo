@@ -30,7 +30,7 @@ const Home = () => {
       <Panel
         displayText="I'd love to help you with your next project."
         x={7.5}
-        y={40}
+        y={41}
       />
       <Canvas className="w-100 h-100" camera={{ position: [11, 32, 35] }}>
         <CameraControls />
