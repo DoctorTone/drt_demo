@@ -96,7 +96,7 @@ const Portfolio = () => {
                 <img
                   data-aos="fade-up"
                   className="img-fluid rounded-lg"
-                  src="NEON.jpg"
+                  src="NEON.png"
                   alt=""
                 />
                 <div className="img-text-overlay">
