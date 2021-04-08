@@ -6,10 +6,20 @@ const MedicalViz = () => {
     <div>
       <Navbar activeLink="Portfolio" />
       <hr className="mt-5 h-line" />
-      <h2 className="indent orangeText">Portfolio - Medical Viz</h2>
+      <h2 className="indent orangeText display-4">
+        Portfolio - <span className="h1">Medical Viz</span>
+      </h2>
       <hr className="h-line mb-5" />
       <div className="container">
-        <p>Medical Viz</p>
+        <div className="row">
+          <div className="col-4 offset-4">
+            <img
+              className="img-fluid rounded-lg"
+              src="../volumeRender.jpg"
+              alt=""
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

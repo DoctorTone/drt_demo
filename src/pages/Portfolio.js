@@ -44,7 +44,7 @@ const Portfolio = () => {
     <div style={renderStyle}>
       <Navbar activeLink="Portfolio" />
       <hr className="mt-5 h-line" />
-      <h2 className="indent orangeText">Portfolio</h2>
+      <h2 className="indent orangeText display-4">Portfolio</h2>
       <hr className="h-line mb-5" />
       <div className="container">
         <div className="row orangeText text-center mb-5">
