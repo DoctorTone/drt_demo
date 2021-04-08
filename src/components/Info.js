@@ -23,6 +23,11 @@ const Info = () => {
         </div>
         <div className="col-4">
           <p className="orangeText">Social</p>
+          <p>
+            <i className="fab fa-linkedin fa-2x"></i>
+            <i className="fab fa-twitter fa-2x"></i>
+            <i className="fab fa-youtube fa-2x"></i>
+          </p>
         </div>
       </div>
     </div>
