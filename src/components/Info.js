@@ -5,7 +5,16 @@ const Info = () => {
     <div className="container">
       <div className="row">
         <div className="col-4">
-          <p>Location</p>
+          <p className="orangeText">Location</p>
+          <p>
+            1 Highfield Drive
+            <br />
+            Nuthall
+            <br />
+            Nottingham
+            <br />
+            NG16 1AD
+          </p>
         </div>
         <div className="col-4">
           <p>Contact</p>
