@@ -43,102 +43,104 @@ const Portfolio = () => {
   return (
     <div style={renderStyle}>
       <Navbar activeLink="Portfolio" />
-      <hr className="mt-5 h-line" />
-      <h2 className="indent orangeText display-4">Portfolio</h2>
-      <hr className="h-line mb-5" />
       <div className="container">
-        <div className="row orangeText text-center mb-5">
-          <div className="col-6">
-            <Link className="link-image" to="/portfolio/medical">
-              <img
-                data-aos="fade-up"
-                className="img-fluid rounded-lg"
-                src="volumeRender.jpg"
-                alt=""
-              />
-              <div className="img-text-overlay">
-                <h4>Medical Visualisation</h4>
-              </div>
-            </Link>
+        <hr className="mt-5 h-line" />
+        <h2 className="orangeText display-4">Portfolio</h2>
+        <hr className="h-line mb-5" />
+        <div className="container">
+          <div className="row orangeText text-center mb-5">
+            <div className="col-6">
+              <Link className="link-image" to="/portfolio/medical">
+                <img
+                  data-aos="fade-up"
+                  className="img-fluid rounded-lg"
+                  src="volumeRender.jpg"
+                  alt=""
+                />
+                <div className="img-text-overlay">
+                  <h4>Medical Visualisation</h4>
+                </div>
+              </Link>
+            </div>
+            <div className="col-6 img-overlay">
+              <Link className="link-image" to="/portfolio/dataViz">
+                <img
+                  data-aos="fade-up"
+                  className="img-fluid rounded-lg"
+                  src="FTSEViz.jpg"
+                  alt=""
+                />
+                <div className="img-text-overlay">
+                  <h4>3D Data Visualisation</h4>
+                </div>
+              </Link>
+            </div>
           </div>
-          <div className="col-6 img-overlay">
-            <Link className="link-image" to="/portfolio/dataViz">
-              <img
-                data-aos="fade-up"
-                className="img-fluid rounded-lg"
-                src="FTSEViz.jpg"
-                alt=""
-              />
-              <div className="img-text-overlay">
-                <h4>3D Data Visualisation</h4>
-              </div>
-            </Link>
+
+          <div className="row orangeText text-center mb-5">
+            <div className="col-6">
+              <Link className="link-image" to="/portfolio/sleepData">
+                <img
+                  data-aos="fade-up"
+                  className="img-fluid rounded"
+                  src="sleepData.jpg"
+                  alt=""
+                />
+                <div className="img-text-overlay">
+                  <h4>Sleep Visualisation</h4>
+                </div>
+              </Link>
+            </div>
+            <div className="col-6">
+              <Link className="link-image" to="/portfolio/neon">
+                <img
+                  data-aos="fade-up"
+                  className="img-fluid rounded-lg"
+                  src="NEON.jpg"
+                  alt=""
+                />
+                <div className="img-text-overlay">
+                  <h4>Clinical Trials</h4>
+                </div>
+              </Link>
+            </div>
+          </div>
+
+          <div className="row orangeText text-center mb-5">
+            <div className="col-6">
+              <Link className="link-image" to="/portfolio/neon">
+                <img
+                  data-aos="fade-up"
+                  className="img-fluid rounded-lg"
+                  src="dnaVisualisation.jpg"
+                  alt=""
+                />
+                <div className="img-text-overlay">
+                  <h4>Scientific Visualisation</h4>
+                </div>
+              </Link>
+            </div>
+            <div className="col-6">
+              <Link className="link-image" to="/portfolio/safety">
+                <img
+                  data-aos="fade-up"
+                  className="img-fluid rounded-lg"
+                  src="fireSafety.jpg"
+                  alt=""
+                />
+                <div className="img-text-overlay">
+                  <h4>Safety Simulation</h4>
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
 
-        <div className="row orangeText text-center mb-5">
-          <div className="col-6">
-            <Link className="link-image" to="/portfolio/sleepData">
-              <img
-                data-aos="fade-up"
-                className="img-fluid rounded"
-                src="sleepData.jpg"
-                alt=""
-              />
-              <div className="img-text-overlay">
-                <h4>Sleep Visualisation</h4>
-              </div>
-            </Link>
-          </div>
-          <div className="col-6">
-            <Link className="link-image" to="/portfolio/neon">
-              <img
-                data-aos="fade-up"
-                className="img-fluid rounded-lg"
-                src="NEON.jpg"
-                alt=""
-              />
-              <div className="img-text-overlay">
-                <h4>Clinical Trials</h4>
-              </div>
-            </Link>
-          </div>
-        </div>
-
-        <div className="row orangeText text-center mb-5">
-          <div className="col-6">
-            <Link className="link-image" to="/portfolio/neon">
-              <img
-                data-aos="fade-up"
-                className="img-fluid rounded-lg"
-                src="dnaVisualisation.jpg"
-                alt=""
-              />
-              <div className="img-text-overlay">
-                <h4>Scientific Visualisation</h4>
-              </div>
-            </Link>
-          </div>
-          <div className="col-6">
-            <Link className="link-image" to="/portfolio/safety">
-              <img
-                data-aos="fade-up"
-                className="img-fluid rounded-lg"
-                src="fireSafety.jpg"
-                alt=""
-              />
-              <div className="img-text-overlay">
-                <h4>Safety Simulation</h4>
-              </div>
-            </Link>
-          </div>
-        </div>
+        <hr className="mt-5 h-line" />
+        <Info />
+        <hr className="mt-5 h-line" />
+        <Footer />
       </div>
-
-      <hr className="mt-5 h-line" />
-      <Info />
-      <hr className="mt-5 h-line" />
-      <Footer />
     </div>
   );
 };
