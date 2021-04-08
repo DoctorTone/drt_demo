@@ -24,16 +24,6 @@ const Portfolio = () => {
     border: "white solid 1px",
   };
 
-  const changeOpacity = (e) => {
-    console.log(`Mouse in target = ${e.target}`);
-    e.target.style.opacity = "0.3";
-  };
-
-  const resetOpacity = (e) => {
-    console.log(`Mouse out target=${e.target}`);
-    e.target.style.opacity = "1.0";
-  };
-
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -43,6 +33,20 @@ const Portfolio = () => {
   return (
     <div style={renderStyle}>
       <Navbar activeLink="Portfolio" />
+      <ul className="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
       <div className="container">
         <hr className="mt-5 h-line" />
         <h2 className="orangeText display-4">Portfolio</h2>
