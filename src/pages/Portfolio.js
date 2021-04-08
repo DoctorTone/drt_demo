@@ -12,7 +12,7 @@ const Portfolio = () => {
     background: "url(logo512.png) no-repeat center fixed",
   };
 
-  const renderStyle = {
+  const renderStyleBackground = {
     position: "absolute",
     height: "250vh",
     width: "100%",
@@ -21,6 +21,13 @@ const Portfolio = () => {
     backgroundSize: "cover",
     backgroundAttachment: "fixed",
     backgroundRepeat: "no-repeat",
+  };
+
+  const renderStyle = {
+    position: "absolute",
+    height: "100vh",
+    width: "100%",
+    background: "rgb(38, 38, 38)",
   };
 
   const imgStyle = {
