@@ -1,5 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import Info from "../components/Info";
+import Footer from "../components/Footer";
 
 const MedicalViz = () => {
   return (
@@ -37,13 +39,17 @@ const MedicalViz = () => {
             </a>
             <a
               href="https://www.drt-software.com/MedicalViz/medicalViz.html"
-              className="btn btn-secondary"
+              className="btn btn-warning"
               target="_blank"
             >
               Watch video
             </a>
           </div>
         </div>
+        <hr className="mt-5 h-line" />
+        <Info />
+        <hr className="mt-5 h-line" />
+        <Footer />
       </div>
     </div>
   );
