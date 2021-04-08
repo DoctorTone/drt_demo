@@ -24,9 +24,21 @@ const Info = () => {
         <div className="col-4">
           <p className="orangeText">Social</p>
           <p>
-            <i className="fab fa-linkedin fa-2x"></i>
-            <i className="fab fa-twitter fa-2x"></i>
-            <i className="fab fa-youtube fa-2x"></i>
+            <a
+              href="https://www.linkedin.com/in/tony-glover-4081694/"
+              target="_blank"
+            >
+              <i className="fab fa-linkedin fa-2x mr-3"></i>
+            </a>
+            <a href="https://twitter.com/DrtSoftware" target="_blank">
+              <i className="fab fa-twitter fa-2x mr-3"></i>
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UCNYHLpd8oKLoE2xw49ZX1nQ?"
+              target="_blank"
+            >
+              <i className="fab fa-youtube fa-2x"></i>
+            </a>
           </p>
         </div>
       </div>
