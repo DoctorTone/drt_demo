@@ -9,11 +9,12 @@ const MedicalViz = () => {
       <Navbar activeLink="Portfolio" />
       <div className="container">
         <hr className="mt-5 h-line" />
-        <h2 className="orangeText display-4">
-          Portfolio - <span className="display-6">Medical Visualisation</span>
-        </h2>
-        <hr className="h-line mb-5" />
+        <h2 className="orangeText display-4">Portfolio</h2>
+        <hr className="h-line mb-3" />
         <div className="container">
+          <p className="text-center orangeText display-5">
+            Medical Visualisation
+          </p>
           <div className="row">
             <div className="col-4 offset-4 mb-3">
               <img
