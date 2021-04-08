@@ -38,7 +38,7 @@ const MedicalViz = () => {
               Launch demo
             </a>
             <a
-              href="https://www.drt-software.com/MedicalViz/medicalViz.html"
+              href="https://www.youtube.com/watch?v=MoKVrdJoqAM"
               className="btn btn-warning"
               target="_blank"
             >
