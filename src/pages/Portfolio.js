@@ -5,6 +5,7 @@ import AbsoluteWrapper from "../components/AbsoluteWrapper";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Info from "../components/Info";
+import Footer from "../components/Footer";
 
 const Portfolio = () => {
   const background = {
@@ -136,6 +137,8 @@ const Portfolio = () => {
 
       <hr className="mt-5 h-line" />
       <Info />
+      <hr className="mt-5 h-line" />
+      <Footer />
     </div>
   );
 };

@@ -23,6 +23,13 @@ body {
   background-color: grey;
   width: 80%;
 }
+a {
+  color: white;
+}
+a:hover {
+  color: orange;
+  text-decoration: none;
+}
 a.link-image:hover {
   color: orange;
 }

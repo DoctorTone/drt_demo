@@ -4,7 +4,8 @@ const Info = () => {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-4">
+        <div className="col-2"></div>
+        <div className="col-3">
           <p className="orangeText">Location</p>
           <p>
             1 Highfield Drive
@@ -16,12 +17,16 @@ const Info = () => {
             NG16 1AD
           </p>
         </div>
-        <div className="col-4">
+        <div className="col-3">
           <p className="orangeText">Contact</p>
-          <p>enquiries@drt-software.com</p>
+          <p>
+            <a href="mailto:enquiries@drt-software.com?subject=Project enquiry">
+              enquiries@drt-software.com
+            </a>
+          </p>
           <p>0115 8440840</p>
         </div>
-        <div className="col-4">
+        <div className="col-3">
           <p className="orangeText">Social</p>
           <p>
             <a
