@@ -133,7 +133,7 @@ a.link-image:hover {
   height: 20px;
   background: rgba(245, 140, 4, 0.2);
   animation: animate 10s linear infinite;
-  bottom: 0px;
+  top: 200vh;
 }
 
 .circles li:nth-child(1) {
@@ -217,7 +217,7 @@ a.link-image:hover {
   }
 
   100% {
-    transform: translateY(-500px) rotate(720deg);
+    transform: translateY(-2500px) rotate(720deg);
     opacity: 0;
     border-radius: 50%;
   }

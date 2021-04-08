@@ -14,10 +14,13 @@ const Portfolio = () => {
 
   const renderStyle = {
     position: "absolute",
-    top: "0",
-    left: "0",
-    right: "0",
-    bottom: "0",
+    height: "250vh",
+    width: "100%",
+    background: "black",
+    backgroundImage: 'url("night.jpg")',
+    backgroundSize: "cover",
+    backgroundAttachment: "fixed",
+    backgroundRepeat: "no-repeat",
   };
 
   const imgStyle = {
@@ -33,21 +36,7 @@ const Portfolio = () => {
   return (
     <div style={renderStyle}>
       <Navbar activeLink="Portfolio" />
-      <ul className="circles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-      <div className="container">
+      <div id="portfolio" className="container">
         <hr className="mt-5 h-line" />
         <h2 className="orangeText display-4">Portfolio</h2>
         <hr className="h-line mb-5" />
