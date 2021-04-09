@@ -1,34 +1,30 @@
 import ReactDOM from "react-dom";
-import React, { useContext } from "react";
-import { Route, Switch, useLocation } from "react-router-dom";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Portfolio from "./pages/Portfolio";
-import Experiments from "./pages/Experiments";
-import Contact from "./pages/Contact";
-import MedicalViz from "./pages/MedicalViz";
+import React, { Suspense } from "react";
+import { Canvas } from "react-three-fiber";
+import CameraControls from "./camera/CameraControls";
+import Cubes from "./components/Cubes";
+import Logo from "./components/Logo";
 
 function App() {
+  const renderStyle = {
+    position: "absolute",
+    top: "0",
+    left: "0",
+    right: "0",
+    bottom: "0",
+  };
+
   return (
-    <>
-      <Route
-        render={({ location }) => (
-          <TransitionGroup>
-            <CSSTransition key={location.key} timeout={1100} classNames="fade">
-              <Switch location={location}>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/portfolio" component={Portfolio} />
-                <Route exact path="/portfolio/medical" component={MedicalViz} />
-                <Route exact path="/experiments" component={Experiments} />
-                <Route exact path="/contact" component={Contact} />
-                <Route exact path="/about" component={About} />
-              </Switch>
-            </CSSTransition>
-          </TransitionGroup>
-        )}
-      />
-    </>
+    <div style={renderStyle}>
+      <Canvas className="w-100 h-100" camera={{ position: [11, 32, 35] }}>
+        <CameraControls />
+        <spotLight position={[50, 50, 7]} />
+        <Cubes color={"grey"} />
+        <Suspense fallback={null}>
+          <Logo />
+        </Suspense>
+      </Canvas>
+    </div>
   );
 }
 
