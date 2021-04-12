@@ -12,6 +12,7 @@ function App() {
       <CameraControls />
       <spotLight
         position={[15, 50, 7]}
+        distance={200}
         angle={0.45}
         intensity={2.0}
         penumbra={0.49}
