@@ -23,8 +23,8 @@ function App() {
           position={[15, 50, 7]}
           angle={0.45}
           intensity={2.0}
-          penumbra={0.9}
-          decay={2}
+          penumbra={0.49}
+          decay={1}
         />
         <Cubes color={"grey"} />
         <Box position={[50, 50, 7]} />
