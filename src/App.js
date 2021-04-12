@@ -19,7 +19,13 @@ function App() {
     <div style={renderStyle}>
       <Canvas className="w-100 h-100" camera={{ position: [11, 32, 35] }}>
         <CameraControls />
-        <spotLight position={[50, 50, 7]} angle={0.25} intensity={2.0} />
+        <spotLight
+          position={[15, 50, 7]}
+          angle={0.45}
+          intensity={2.0}
+          penumbra={0.9}
+          decay={2}
+        />
         <Cubes color={"grey"} />
         <Box position={[50, 50, 7]} />
         <Suspense fallback={null}>
