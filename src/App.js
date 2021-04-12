@@ -1,9 +1,10 @@
 import ReactDOM from "react-dom";
-import React, { Suspense, useRef } from "react";
+import React, { Suspense } from "react";
 import { Canvas } from "react-three-fiber";
 import CameraControls from "./camera/CameraControls";
 import Cubes from "./components/Cubes";
 import Logo from "./components/Logo";
+import Box from "./components/Box";
 
 function App() {
   const renderStyle = {
@@ -14,15 +15,13 @@ function App() {
     bottom: "0",
   };
 
-  const light = useRef();
-
   return (
     <div style={renderStyle}>
       <Canvas className="w-100 h-100" camera={{ position: [11, 32, 35] }}>
         <CameraControls />
-        <spotLight ref={light} position={[50, 50, 7]} />
-        <spotLightHelper args={[light]} />
+        <spotLight position={[50, 50, 7]} />
         <Cubes color={"grey"} />
+        <Box position={[50, 50, 7]} />
         <Suspense fallback={null}>
           <Logo />
         </Suspense>
