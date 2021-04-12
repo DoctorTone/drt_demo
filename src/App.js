@@ -8,18 +8,23 @@ import Box from "./components/Box";
 
 function App() {
   return (
-    <Canvas className="w-100 h-100" camera={{ position: [11, 32, 35] }}>
+    <Canvas
+      shadowMap
+      className="w-100 h-100"
+      camera={{ position: [11, 32, 35] }}
+    >
       <CameraControls />
       <spotLight
-        position={[15, 50, 7]}
+        position={[10, 30, 7]}
         distance={200}
-        angle={0.45}
+        angle={0.65}
         intensity={2.0}
         penumbra={0.49}
         decay={1}
+        castShadow
       />
       <Cubes color={"grey"} />
-      <Box position={[50, 50, 7]} />
+      <Box position={[15, 50, 7]} />
       <Suspense fallback={null}>
         <Logo />
       </Suspense>

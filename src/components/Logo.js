@@ -51,6 +51,7 @@ const Logo = (props) => {
         object={logo.scene}
         position={[0, -15, 0]}
         scale={[10, 10, 10]}
+        castShadow
       />
     </group>
   );

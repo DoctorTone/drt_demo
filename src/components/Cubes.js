@@ -52,7 +52,7 @@ const Cubes = ({ color }) => {
 
   return (
     <group ref={group} rotation={[0, Math.PI / 2, 0]}>
-      <instancedMesh ref={mesh} args={[null, null, count]}>
+      <instancedMesh ref={mesh} args={[null, null, count]} receiveShadow>
         <cylinderBufferGeometry
           args={[SCENE.RADIUS, SCENE.RADIUS, SCENE.HEIGHT, SCENE.SEGMENTS]}
         />
