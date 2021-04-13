@@ -29,10 +29,10 @@ function App() {
           shadow-camera-near={1}
           shadow-camera-far={100}
         />
-        <Plane receiveShadow />
+        <Cubes receiveShadow />
         <Box position={[0, 30, 0]} />
         <Suspense fallback={null}>
-          <Model />
+          <Model castShadow />
         </Suspense>
       </Canvas>
     </>

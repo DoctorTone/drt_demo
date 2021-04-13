@@ -46,7 +46,7 @@ const Model = (props) => {
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh
-        castShadow
+        {...props}
         geometry={nodes.DRT001.geometry}
         material={materials.Orange}
         position={[-10, 5, 0]}
