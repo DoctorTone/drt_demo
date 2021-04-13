@@ -48,9 +48,10 @@ const Model = (props) => {
       <mesh
         geometry={nodes.DRT001.geometry}
         material={materials.Orange}
-        position={[-10, -10, 0]}
+        position={[-10, -17, 0]}
         scale={[10, 10, 10]}
         rotation={[Math.PI / 2, 0, 0]}
+        castShadow
       />
     </group>
   );
