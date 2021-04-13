@@ -1,6 +1,7 @@
 import ReactDOM from "react-dom";
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
+import CameraControls from "./camera/CameraControls";
 import Cubes from "./components/Cubes";
 import Model from "./components/DRT-Text";
 import Box from "./components/Box";
@@ -13,6 +14,7 @@ function App() {
         className="w-100 h-100"
         camera={{ position: [11, 32, 35] }}
       >
+        <CameraControls />
         <spotLight
           position={[10, 30, 7]}
           distance={200}
