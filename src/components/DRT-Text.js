@@ -13,7 +13,7 @@ const Model = (props) => {
   let delta;
   let elapsed;
   const group = useRef();
-  const [animating, setAnimating] = useState(false);
+  const [animating, setAnimating] = useState(true);
   const [animationTime, setAnimationTime] = useState(0);
   const { nodes, materials } = useGLTF("/DRT-Text.gltf");
 
@@ -49,7 +49,7 @@ const Model = (props) => {
         {...props}
         geometry={nodes.DRT001.geometry}
         material={materials.Orange}
-        position={[-10, 5, 0]}
+        position={[-10, -17, 0]}
         scale={[10, 10, 10]}
         rotation={[Math.PI / 2, 0, 0]}
       />

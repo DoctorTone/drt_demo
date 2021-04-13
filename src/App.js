@@ -7,21 +7,23 @@ import Model from "./components/DRT-Text";
 import Box from "./components/Box";
 import Plane from "./components/Plane";
 
+const lightPosition = [15, 50, 7];
+
 function App() {
   return (
     <>
       <Canvas
         shadows
         className="w-100 h-100"
-        camera={{ position: [11, 32, 35] }}
+        camera={{ position: [11, 32, 40] }}
       >
         <CameraControls />
         <spotLight
-          position={[0, 30, 0]}
-          distance={200}
-          angle={0.95}
+          position={lightPosition}
+          distance={100}
+          angle={0.45}
           intensity={2.0}
-          penumbra={0.49}
+          penumbra={1}
           decay={1}
           castShadow
           shadow-mapSize-height={512}
@@ -30,7 +32,7 @@ function App() {
           shadow-camera-far={100}
         />
         <Cubes receiveShadow />
-        <Box position={[0, 30, 0]} />
+        <Box position={lightPosition} />
         <Suspense fallback={null}>
           <Model castShadow />
         </Suspense>
