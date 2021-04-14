@@ -12,18 +12,17 @@ const ControlPanel = () => {
     zIndex: "1",
   };
 
-  const setLightPos = useStore((state) => state.setLightPos);
+  const { setLightPosition } = useStore();
+
+  const updateLightPos = (event, newValue) => {
+    console.log("Value = ", newValue);
+    setLightPosition([newValue, 50, 7]);
+  };
 
   return (
     <div style={panelStyle}>
       <p>Position</p>
-      <input
-        type="range"
-        onChange={(event) => setLightPos(event.target.value)}
-        defaultValue={0}
-        min={-50}
-        max={50}
-      />
+      <Slider onChange={updateLightPos} defaultValue={15} min={-50} max={50} />
     </div>
   );
 };
