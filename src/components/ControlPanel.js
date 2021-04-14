@@ -1,17 +1,18 @@
 import React from "react";
-import { Button } from "@material-ui/core";
+import Slider from "@material-ui/core/Slider";
 
 const ControlPanel = () => {
   const panelStyle = {
     position: "absolute",
-    top: "0",
+    top: "1%",
     left: "5%",
     width: "50%",
+    zIndex: "1",
   };
 
   return (
     <div style={panelStyle}>
-      <Button color="primary">Hello</Button>
+      <Slider />
     </div>
   );
 };
