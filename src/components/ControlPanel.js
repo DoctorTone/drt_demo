@@ -13,16 +13,17 @@ const ControlPanel = () => {
   };
 
   const { setLightPosition } = useStore();
+  const { lightPosition } = useStore();
 
-  const updateLightPos = (event, newValue) => {
+  const updateLightPosX = (event, newValue) => {
     console.log("Value = ", newValue);
-    setLightPosition([newValue, 50, 7]);
+    setLightPosition([newValue, lightPosition[1], lightPosition[2]]);
   };
 
   return (
     <div style={panelStyle}>
       <p>Position</p>
-      <Slider onChange={updateLightPos} defaultValue={15} min={-50} max={50} />
+      <Slider onChange={updateLightPosX} defaultValue={15} min={-50} max={50} />
     </div>
   );
 };
