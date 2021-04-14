@@ -6,12 +6,14 @@ import Cubes from "./components/Cubes";
 import Model from "./components/DRT-Text";
 import Box from "./components/Box";
 import Plane from "./components/Plane";
+import Button from "material-kit-react/src/components/CustomButtons/Button";
 
 const lightPosition = [15, 50, 7];
 
 function App() {
   return (
     <>
+      <Button type="button">Default</Button>
       <Canvas
         shadows
         className="w-100 h-100"
