@@ -7,10 +7,10 @@ import Model from "./components/DRT-Text";
 import Box from "./components/Box";
 import Plane from "./components/Plane";
 import ControlPanel from "./components/ControlPanel";
-
-const lightPosition = [15, 50, 7];
+import useStore from "./state/store";
 
 function App() {
+  const { lightPosition } = useStore();
   return (
     <>
       <ControlPanel />

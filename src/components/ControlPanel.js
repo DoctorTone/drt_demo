@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "@material-ui/core/Slider";
 import { withStyles } from "@material-ui/core/styles";
+import useStore from "../state/store";
 
 const ControlPanel = () => {
   const panelStyle = {
@@ -11,15 +12,18 @@ const ControlPanel = () => {
     zIndex: "1",
   };
 
-  const PosSlider = withStyles({
-    root: {
-      color: "white",
-    },
-  })(Slider);
+  const setLightPos = useStore((state) => state.setLightPos);
 
   return (
     <div style={panelStyle}>
-      <PosSlider defaultValue={0} min={0} max={100} />
+      <p>Position</p>
+      <input
+        type="range"
+        onChange={(event) => setLightPos(event.target.value)}
+        defaultValue={0}
+        min={-50}
+        max={50}
+      />
     </div>
   );
 };
