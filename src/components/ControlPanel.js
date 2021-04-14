@@ -6,8 +6,8 @@ import useStore from "../state/store";
 const ControlPanel = () => {
   const panelStyle = {
     position: "absolute",
-    top: "5%",
-    left: "5%",
+    top: "1%",
+    left: "3%",
     width: "25%",
     zIndex: "1",
   };
@@ -32,19 +32,22 @@ const ControlPanel = () => {
 
   return (
     <div style={panelStyle}>
-      <p>Position</p>
+      <p>Light Position</p>
+      <span>X</span>
       <Slider
         onChange={updateLightPosX}
         defaultValue={lightPosition[0]}
         min={-50}
         max={50}
       />
+      <span>Y</span>
       <Slider
         onChange={updateLightPosY}
         defaultValue={lightPosition[1]}
         min={0}
         max={50}
       />
+      <span>Z</span>
       <Slider
         onChange={updateLightPosZ}
         defaultValue={lightPosition[2]}
