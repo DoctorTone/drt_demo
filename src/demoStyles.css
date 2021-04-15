@@ -11,7 +11,12 @@ body,
 body {
   background: rgb(38, 38, 38);
 }
-
 .noBottom {
   margin-bottom: 0;
+}
+.orangeText {
+  color: orange;
+}
+span.MuiSlider-root {
+  color: orange;
 }
