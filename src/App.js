@@ -17,7 +17,6 @@ function App() {
     shadowsEnabled,
   } = useStore();
 
-  console.log("Shadows enabled = ", shadowsEnabled);
   return (
     <>
       <ControlPanel />

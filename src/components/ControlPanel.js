@@ -48,7 +48,7 @@ const ControlPanel = () => {
 
   return (
     <div style={panelStyle}>
-      <p>Light Position</p>
+      <p className="noBottom">Light Position</p>
       <span>X</span>
       <Slider
         onChange={updateLightPosX}
@@ -73,7 +73,7 @@ const ControlPanel = () => {
         max={50}
         valueLabelDisplay="auto"
       />
-      <p>Angle</p>
+      <p className="noBottom">Angle</p>
       <Slider
         onChange={updateLightAngle}
         defaultValue={lightAngle}
@@ -82,7 +82,7 @@ const ControlPanel = () => {
         step={0.1}
         valueLabelDisplay="auto"
       />
-      <p>Intensity</p>
+      <p className="noBottom">Intensity</p>
       <Slider
         onChange={updateLightIntensity}
         defaultValue={lightIntensity}
@@ -91,8 +91,12 @@ const ControlPanel = () => {
         step={0.1}
         valueLabelDisplay="auto"
       />
-      <p>Shadows</p>
-      <Checkbox checked={shadowsEnabled} onChange={toggleShadows} />
+      <p className="noBottom">Shadows</p>
+      <Checkbox
+        color="primary"
+        checked={shadowsEnabled}
+        onChange={toggleShadows}
+      />
     </div>
   );
 };
