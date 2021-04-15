@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "@material-ui/core/Slider";
 import { withStyles } from "@material-ui/core/styles";
 import useStore from "../state/store";
+import Checkbox from "@material-ui/core/Checkbox";
 
 const ControlPanel = () => {
   const panelStyle = {
@@ -84,6 +85,8 @@ const ControlPanel = () => {
         step={0.1}
         valueLabelDisplay="auto"
       />
+      <p>Shadows</p>
+      <Checkbox defaultChecked />
     </div>
   );
 };
