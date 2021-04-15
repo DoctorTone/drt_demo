@@ -2,8 +2,8 @@ import React from "react";
 import Slider from "@material-ui/core/Slider";
 import { withStyles } from "@material-ui/core/styles";
 import useStore from "../state/store";
-import Checkbox from "@material-ui/core/Checkbox";
-import Tooltip from "@material-ui/core/Tooltip";
+import Switch from "@material-ui/core/Switch";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
 
 const ControlPanel = () => {
   const panelStyle = {
@@ -122,11 +122,15 @@ const ControlPanel = () => {
         step={0.1}
         valueLabelDisplay="auto"
       />
-      <p className="noBottom">Shadows</p>
-      <Checkbox
-        color="primary"
-        checked={shadowsEnabled}
-        onChange={toggleShadows}
+      <FormControlLabel
+        control={
+          <Switch
+            color="primary"
+            checked={shadowsEnabled}
+            onChange={toggleShadows}
+          />
+        }
+        label="Shadows"
       />
     </div>
   );
