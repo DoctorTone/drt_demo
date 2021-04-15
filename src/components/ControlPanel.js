@@ -12,8 +12,8 @@ const ControlPanel = () => {
     zIndex: "1",
   };
 
-  const { setLightPosition } = useStore();
-  const { lightPosition } = useStore();
+  const { setLightPosition, lightPosition } = useStore();
+  const { setLightAngle, lightAngle } = useStore();
 
   const updateLightPosX = (event, newValue) => {
     //console.log("Value = ", newValue);
@@ -28,6 +28,10 @@ const ControlPanel = () => {
   const updateLightPosZ = (event, newValue) => {
     //console.log("Value = ", newValue);
     setLightPosition([lightPosition[0], lightPosition[1], newValue]);
+  };
+
+  const updateLightAngle = (event, newValue) => {
+    setLightAngle(newValue);
   };
 
   return (
@@ -53,6 +57,14 @@ const ControlPanel = () => {
         defaultValue={lightPosition[2]}
         min={-50}
         max={50}
+      />
+      <p>Angle</p>
+      <Slider
+        onChange={updateLightAngle}
+        defaultValue={lightAngle}
+        min={0}
+        max={1}
+        step={0.1}
       />
     </div>
   );

@@ -11,6 +11,8 @@ import useStore from "./state/store";
 
 function App() {
   const { lightPosition } = useStore();
+  const { lightAngle } = useStore();
+
   return (
     <>
       <ControlPanel />
@@ -23,7 +25,7 @@ function App() {
         <spotLight
           position={lightPosition}
           distance={100}
-          angle={0.45}
+          angle={lightAngle}
           intensity={2.0}
           penumbra={1}
           decay={1}

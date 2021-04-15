@@ -4,6 +4,8 @@ import { Vector3 } from "three";
 const useStore = create((set) => ({
   lightPosition: [15, 50, 7],
   setLightPosition: (lightPos) => set({ lightPosition: lightPos }),
+  lightAngle: 0.45,
+  setLightAngle: (angle) => set({ lightAngle: angle }),
 }));
 
 export default useStore;
