@@ -16,6 +16,7 @@ const ControlPanel = () => {
   const { setLightPosition, lightPosition } = useStore();
   const { setLightAngle, lightAngle } = useStore();
   const { setLightIntensity, lightIntensity } = useStore();
+  const { setShadows, shadowsEnabled } = useStore();
 
   const updateLightPosX = (event, newValue) => {
     //console.log("Value = ", newValue);
@@ -38,6 +39,11 @@ const ControlPanel = () => {
 
   const updateLightIntensity = (event, newValue) => {
     setLightIntensity(newValue);
+  };
+
+  const toggleShadows = (event) => {
+    //console.log("Shadows = ", event.target.checked);
+    setShadows(event.target.checked);
   };
 
   return (
@@ -86,7 +92,7 @@ const ControlPanel = () => {
         valueLabelDisplay="auto"
       />
       <p>Shadows</p>
-      <Checkbox defaultChecked />
+      <Checkbox checked={shadowsEnabled} onChange={toggleShadows} />
     </div>
   );
 };

@@ -10,8 +10,14 @@ import ControlPanel from "./components/ControlPanel";
 import useStore from "./state/store";
 
 function App() {
-  const { lightPosition, lightAngle, lightIntensity } = useStore();
+  const {
+    lightPosition,
+    lightAngle,
+    lightIntensity,
+    shadowsEnabled,
+  } = useStore();
 
+  console.log("Shadows enabled = ", shadowsEnabled);
   return (
     <>
       <ControlPanel />
@@ -28,7 +34,7 @@ function App() {
           intensity={lightIntensity}
           penumbra={1}
           decay={1}
-          castShadow
+          castShadow={shadowsEnabled}
           shadow-mapSize-height={512}
           shadow-mapSize-width={512}
           shadow-camera-near={1}
