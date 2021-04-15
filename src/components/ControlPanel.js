@@ -48,6 +48,7 @@ const ControlPanel = () => {
         defaultValue={lightPosition[0]}
         min={-50}
         max={50}
+        valueLabelDisplay="auto"
       />
       <span>Y</span>
       <Slider
@@ -55,6 +56,7 @@ const ControlPanel = () => {
         defaultValue={lightPosition[1]}
         min={0}
         max={50}
+        valueLabelDisplay="auto"
       />
       <span>Z</span>
       <Slider
@@ -62,6 +64,7 @@ const ControlPanel = () => {
         defaultValue={lightPosition[2]}
         min={-50}
         max={50}
+        valueLabelDisplay="auto"
       />
       <p>Angle</p>
       <Slider
@@ -70,6 +73,7 @@ const ControlPanel = () => {
         min={0}
         max={1}
         step={0.1}
+        valueLabelDisplay="auto"
       />
       <p>Intensity</p>
       <Slider
@@ -78,6 +82,7 @@ const ControlPanel = () => {
         min={0}
         max={2}
         step={0.1}
+        valueLabelDisplay="auto"
       />
     </div>
   );
