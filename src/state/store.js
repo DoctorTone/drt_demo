@@ -6,6 +6,8 @@ const useStore = create((set) => ({
   setLightPosition: (lightPos) => set({ lightPosition: lightPos }),
   lightAngle: 0.45,
   setLightAngle: (angle) => set({ lightAngle: angle }),
+  lightIntensity: 2.0,
+  setLightIntensity: (intensity) => set({ lightIntensity: intensity }),
 }));
 
 export default useStore;
