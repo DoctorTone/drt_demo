@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "@material-ui/core/Slider";
 import { withStyles } from "@material-ui/core/styles";
+import { orange } from "@material-ui/core/colors";
 import useStore from "../state/store";
 import Switch from "@material-ui/core/Switch";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
@@ -47,35 +48,19 @@ const ControlPanel = () => {
     setShadows(event.target.checked);
   };
 
-  const PrettoSlider = withStyles({
-    root: {
-      color: "#52af77",
-      height: 8,
-    },
-    thumb: {
-      height: 24,
-      width: 24,
-      backgroundColor: "#fff",
-      border: "2px solid currentColor",
-      marginTop: -8,
-      marginLeft: -12,
-      "&:focus, &:hover, &$active": {
-        boxShadow: "inherit",
+  const PurpleSwitch = withStyles({
+    switchBase: {
+      color: orange[300],
+      "&$checked": {
+        color: orange[500],
+      },
+      "&$checked + $track": {
+        backgroundColor: orange[500],
       },
     },
-    active: {},
-    valueLabel: {
-      left: "calc(-50% + 4px)",
-    },
-    track: {
-      height: 8,
-      borderRadius: 4,
-    },
-    rail: {
-      height: 8,
-      borderRadius: 4,
-    },
-  })(Slider);
+    checked: {},
+    track: {},
+  })(Switch);
 
   return (
     <div style={panelStyle}>
@@ -124,11 +109,7 @@ const ControlPanel = () => {
       />
       <FormControlLabel
         control={
-          <Switch
-            color="primary"
-            checked={shadowsEnabled}
-            onChange={toggleShadows}
-          />
+          <PurpleSwitch checked={shadowsEnabled} onChange={toggleShadows} />
         }
         label="Shadows"
       />
