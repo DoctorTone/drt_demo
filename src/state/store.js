@@ -8,6 +8,8 @@ const useStore = create((set) => ({
   setLightAngle: (angle) => set({ lightAngle: angle }),
   lightIntensity: 2.0,
   setLightIntensity: (intensity) => set({ lightIntensity: intensity }),
+  shadowsEnabled: true,
+  setShadows: (enabled) => set({ shadowsEnabled: enabled }),
 }));
 
 export default useStore;
