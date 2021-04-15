@@ -14,6 +14,7 @@ const ControlPanel = () => {
 
   const { setLightPosition, lightPosition } = useStore();
   const { setLightAngle, lightAngle } = useStore();
+  const { setLightIntensity, lightIntensity } = useStore();
 
   const updateLightPosX = (event, newValue) => {
     //console.log("Value = ", newValue);
@@ -32,6 +33,10 @@ const ControlPanel = () => {
 
   const updateLightAngle = (event, newValue) => {
     setLightAngle(newValue);
+  };
+
+  const updateLightIntensity = (event, newValue) => {
+    setLightIntensity(newValue);
   };
 
   return (
@@ -64,6 +69,14 @@ const ControlPanel = () => {
         defaultValue={lightAngle}
         min={0}
         max={1}
+        step={0.1}
+      />
+      <p>Intensity</p>
+      <Slider
+        onChange={updateLightIntensity}
+        defaultValue={lightIntensity}
+        min={0}
+        max={2}
         step={0.1}
       />
     </div>

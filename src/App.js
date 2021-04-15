@@ -10,8 +10,7 @@ import ControlPanel from "./components/ControlPanel";
 import useStore from "./state/store";
 
 function App() {
-  const { lightPosition } = useStore();
-  const { lightAngle } = useStore();
+  const { lightPosition, lightAngle, lightIntensity } = useStore();
 
   return (
     <>
@@ -26,7 +25,7 @@ function App() {
           position={lightPosition}
           distance={100}
           angle={lightAngle}
-          intensity={2.0}
+          intensity={lightIntensity}
           penumbra={1}
           decay={1}
           castShadow
