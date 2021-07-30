@@ -15,7 +15,7 @@ const Model = (props) => {
   const group = useRef();
   const [animating, setAnimating] = useState(true);
   const [animationTime, setAnimationTime] = useState(0);
-  const { nodes, materials } = useGLTF("/DRT-Text.gltf");
+  const { nodes, materials } = useGLTF("./DRT-Text.gltf");
 
   useFrame((state) => {
     elapsed = state.clock.getElapsedTime();
