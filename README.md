@@ -1,4 +1,4 @@
-# Compmay landing page
+# Company landing page
 
 This project was written with react-three-fiber.
 
