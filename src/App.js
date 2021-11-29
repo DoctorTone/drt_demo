@@ -1,21 +1,16 @@
 import ReactDOM from "react-dom";
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import CameraControls from "./camera/CameraControls";
 import Cubes from "./components/Cubes";
 import Model from "./components/DRT-Text";
 import Box from "./components/Box";
-import Plane from "./components/Plane";
+import { OrbitControls } from "@react-three/drei";
 import ControlPanel from "./components/ControlPanel";
 import useStore from "./state/store";
 
 function App() {
-  const {
-    lightPosition,
-    lightAngle,
-    lightIntensity,
-    shadowsEnabled,
-  } = useStore();
+  const { lightPosition, lightAngle, lightIntensity, shadowsEnabled } =
+    useStore();
 
   return (
     <>
@@ -23,9 +18,7 @@ function App() {
       <Canvas
         shadows
         className="w-100 h-100"
-        camera={{ position: [11, 32, 40] }}
-      >
-        <CameraControls />
+        camera={{ position: [11, 32, 40] }}>
         <spotLight
           position={lightPosition}
           distance={100}
@@ -44,6 +37,7 @@ function App() {
         <Suspense fallback={null}>
           <Model castShadow />
         </Suspense>
+        <OrbitControls target={[-45, 5, -5]} />
       </Canvas>
     </>
   );
