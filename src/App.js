@@ -3,6 +3,7 @@ import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import Cubes from "./components/Cubes";
 import Model from "./components/DRT-Text";
+import Santa from "./components/Santa";
 import Box from "./components/Box";
 import { OrbitControls } from "@react-three/drei";
 import ControlPanel from "./components/ControlPanel";
@@ -36,6 +37,7 @@ function App() {
         <Box position={lightPosition} />
         <Suspense fallback={null}>
           <Model castShadow />
+          <Santa />
         </Suspense>
         <OrbitControls target={[-45, 5, -5]} />
       </Canvas>
