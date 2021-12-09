@@ -13,6 +13,8 @@ const useStore = create((set) => ({
   santaHeight: 23,
   santaSpeed: 0.2,
   animationDelay: 3,
+  SNOWFLAKES: 30,
+  snowHeight: 40,
 }));
 
 export default useStore;
