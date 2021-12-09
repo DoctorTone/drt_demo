@@ -10,6 +10,9 @@ const useStore = create((set) => ({
   setLightIntensity: (intensity) => set({ lightIntensity: intensity }),
   shadowsEnabled: true,
   setShadows: (enabled) => set({ shadowsEnabled: enabled }),
+  santaHeight: 23,
+  santaSpeed: 0.2,
+  animationDelay: 3,
 }));
 
 export default useStore;
