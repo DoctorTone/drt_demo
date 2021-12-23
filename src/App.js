@@ -34,7 +34,7 @@ function App() {
           shadow-camera-near={1}
           shadow-camera-far={100}
         />
-        <Cubes receiveShadow />
+        <Cubes position={[0, 0, 10]} receiveShadow />
         <Box position={lightPosition} />
         <Suspense fallback={null}>
           <Model castShadow />
