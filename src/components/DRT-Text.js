@@ -13,16 +13,7 @@ const Model = (props) => {
   useFrame((state, delta) => {
     if (animating) {
       group.current.position.y += 10 * delta;
-      if (group.current.position.y < 0) {
-        group.current.position.y = 0;
-        group.current.rotation.y = 0;
-      }
       animationTime.current += delta;
-      if (animationTime.current < 0) {
-        animationTime.current = 0;
-        group.current.position.y = 0;
-        group.current.rotation.y = 0;
-      }
       group.current.rotation.y += revSpeed * delta;
       setAnimating(animationTime.current < 3);
     }

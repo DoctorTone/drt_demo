@@ -10,16 +10,16 @@ const Snow = () => {
   const points = useRef();
   const { SNOWFLAKES, snowHeight } = useStore();
 
-  const flakePositions = [];
-  let x;
-  let y;
-  let z;
-  for (let i = 0; i < SNOWFLAKES; ++i) {
-    x = Math.random() * 20 - 10;
-    y = Math.random() * snowHeight;
-    z = Math.random() * 50 - 10;
-    flakePositions.push([x, y, z]);
-  }
+  const flakePositions = new Array(SNOWFLAKES)
+    .fill(undefined)
+    .map((elem, i) => {
+      const flakePos = new THREE.Vector3();
+      flakePos.x = Math.random() * 20 - 10;
+      flakePos.y = Math.random() * snowHeight;
+      flakePos.z = Math.random() * 50 - 10;
+
+      return flakePos;
+    });
 
   useFrame((state) => {
     points.current.children.forEach((point) => {
