@@ -12,10 +12,22 @@ test("render empty scene", async () => {
 test("render cubes correctly", async () => {
   const renderer = await ReactThreeTestRenderer.create(<Cubes />);
 
-  console.log("Scene = ", renderer.scene.children[0].children);
-
   expect(renderer.scene.children.length).toEqual(1);
   expect(renderer.scene.children[0].type).toEqual("Group");
   expect(renderer.scene.children[0].children.length).toEqual(1);
   expect(renderer.scene.children[0].children[0].type).toEqual("Mesh");
+
+  const graph = renderer.toGraph()[0];
+
+  expect(graph).toEqual({
+    type: "Group",
+    name: "",
+    children: [
+      {
+        type: "Mesh",
+        name: "",
+        children: [],
+      },
+    ],
+  });
 });
